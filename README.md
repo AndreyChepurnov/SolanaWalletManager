@@ -12,12 +12,13 @@ Solana Wallet Manager is a Node.js CLI application designed for seamless managem
 - **Intuitive CLI Interface**: Enjoy a user-friendly command-line interface that makes interactions with the application straightforward and accessible.
 - **Advanced Operations**: Perform additional operations such as checking wallet balances, viewing transaction history, and updating wallet details.
 
-## Installation
+## Installation 
 
 To install the required dependencies, make sure you have Node.js installed on your machine, then run the following command in your terminal:
 
 ### npm install
 
+To run the app open the BabloTool.bat file. Enjoy!
 
 ## Usage
 

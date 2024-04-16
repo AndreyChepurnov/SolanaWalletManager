@@ -34,7 +34,7 @@ Solana Wallet Manager is a Node.js CLI application designed for seamless managem
 
 To install the required dependencies, make sure you have Node.js installed on your machine, then run the following command in your terminal:
 
-npm install
+### npm install
 
 ## Wallet Management
 

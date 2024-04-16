@@ -18,26 +18,7 @@ import pkg from 'mssql';
 import os from 'os';
 const wait = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
 
-const getIPAddress = () => {
-  const interfaces = os.networkInterfaces();
-  let ipAddress = '';
 
-  Object.keys(interfaces).forEach((interfaceName) => {
-    const interfaceInfo = interfaces[interfaceName];
-
-    for (const info of interfaceInfo) {
-      if (info.family === 'IPv4' && !info.internal) {
-        ipAddress = info.address;
-        break;
-      }
-    }
-
-    
-  });
-
-  return ipAddress;
-};
-const ip = getIPAddress();
 
 const { connect, query } = pkg;
 
@@ -91,7 +72,6 @@ const readWalletsFileWh = () => {
       await wait(2000)
     }
   };
-// Configure the connection to your SQL Server
 const setWebhook = async () => {
     const { webhook } = readWalletsFile();
   
@@ -108,6 +88,7 @@ const setWebhook = async () => {
     console.log('Webhook set successfully!');
     await wait(2000);
   };
+
 const connection = new Connection('https://api.mainnet-beta.solana.com', 'confirmed');
 const walletFilePath = path.join(new URL('.', import.meta.url).pathname.slice(1), 'wallets.json');
 const addExistingWallet = (name, privateKey) => {

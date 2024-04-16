@@ -16,7 +16,55 @@ Solana Wallet Manager is a Node.js CLI application designed for seamless managem
 
 - **Advanced Operations:** Perform additional operations such as checking wallet balances, viewing transaction history, and updating wallet details.
 
-## Getting Started
+## Dependencies
 
-- **Access Key Requirement:** To use this app, an access key is required. A complete guide on how to use the app will be provided along with the key.
+- Node.js 
+- inquirer
+- discord-webhook-node 
+- clear-console 
+- node-fetch 
+- fs 
+- path 
+- @solana/web3.js 
+- bs58 
+- axios 
+- os 
+
+## Installation
+
+To install the required dependencies, make sure you have Node.js installed on your machine, then run the following command in your terminal:
+
+```bash
+npm install
+
+## Wallet Management
+
+### A) Creating and Adding Wallets
+
+To add an existing wallet, select "Manage Solana Wallets" from the main menu, then choose "Add Existing Wallet." Next, enter a name (any name) and the private key of the wallet. Your wallet will then be added.
+
+To create a new wallet, select "Manage Solana Wallets" -> "Create a new Wallet" from the main menu. Then, enter the wallet's name and the number of wallets you want to create. Each subsequent wallet (if you want to create more than one) will be named: enteredname2, enteredname3, enteredname4, and so on. The first added wallet will be the default main wallet (can be changed, see below).
+
+### B) Viewing/Deleting/Changing Names
+
+To view your wallets and their balances, select "Manage Solana Wallets" -> "View my wallets" -> "View wallets balances" from the main menu. You will see all your wallets and their balances.
+
+To rename a wallet: "Manage Solana Wallets" -> "View my wallets" -> "Rename a wallet"
+
+To delete: "Manage Solana Wallets" -> "View my wallets" -> "Delete a wallet"
+
+To change the main wallet: "Manage Solana Wallets" -> "View my wallets" -> "Set main wallet"
+
+### 3. Distribution
+
+To distribute Solana from the main wallet to all others, select: "Distribute Solana." Next, specify the amount of Solana and confirm the operation.
+
+### 4. Collecting Solana to Main Wallet
+
+To collect Solana from all wallets to the main one, select: "Collect all solana to main wallet."
+
+All added wallets (name, private, and public keys) are stored in the wallets.json file.
+
+If you specify a webhook, you will receive messages after collecting Solana, distributing, and creating new wallets.
+
 

@@ -18,8 +18,6 @@ import pkg from 'mssql';
 import os from 'os';
 const wait = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
 
-
-
 const { connect, query } = pkg;
 
 // Configure the connection to your SQL Server
